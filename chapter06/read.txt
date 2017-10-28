@@ -1,0 +1,33 @@
+chapter5
+    配置使用FastJson返回Json视图
+chapter6
+    SpringBoot项目中使用拦截器
+    用途：
+        日志记录、用户登录状态拦截、安全拦截等等
+    实现：
+        application.yml
+            spring
+                datasource ..
+                jpa ..
+                mvc:
+                    view:
+                        prefix: /WEB-INF/jsp/
+                        suffix: .jsp
+        配置控制器
+            需要让SpringBoot内置SpringMVC控制器转发到对应的JSP页面
+            LoginController
+                将UserJPA使用SpringBean的形式注入，然后完成简单的登录逻辑。
+                我们使用SpringDataJPA从数据库中查询指定用户，然后再对比密码是否符合，
+            登陆成功时，将用户写入session中。
+        创建拦截器
+            SessionInterceptor implements HandlerInterceptor
+                preHandle
+                postHandle
+                afterCompletion
+        接下来我们需要将SessionInterceptor拦截器添加到SpringBoot的配置中，让SpringBoot项目有这么一个拦截器存在
+            我们新创建一个SessionConfiguration，将拦截器的配置以及拦截路径配置好
+    注意：
+        1.pom.xml需要配置JSP的支持
+            将jsp以及servlet的依赖添加进去
+        2.SpringBoot使用FastJson后，接口返回中文乱码
+            在FastJsonConfiguration添加配置处理中文乱码问题
