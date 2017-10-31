@@ -1,0 +1,6 @@
+chapter15
+    QueryDSL是一个Java语言编写的通用查询框架，专注于通过JavaAPI方式构建安全的SQL查询。
+    QueryDSL可以应用到NoSQL数据库上，QueryDSL查询框架可以在任何支持的ORM框架或者SQL平台上以一种通用的API方式来构建SQL。
+    目前QueryDSL支持的平台包扣JPA、JDO、SQL、Java Collections、RDF、Lucene、Hibernate Serch、MongoDB等。
+
+    学习使用SpringBoot项目下SpringDataJPA与QueryDSL框架整合，完成多表关系复杂查询。
