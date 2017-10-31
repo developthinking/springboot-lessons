@@ -17,3 +17,7 @@ SpringBoot项目学习源码
     
     第七章：使用拦截器记录你的SpringBoot的请求日志
     
+    第九章：SpringBoot内置SpringMvc静态文件地址修改
+    
+    第十二章：SpringBoot使用LogBack作为日志组件
+    
