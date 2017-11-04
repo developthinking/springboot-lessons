@@ -9,7 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
+        <module>bean</module>
         <module>user</module>
+        <module>pager</module>
     </modules>
 
     <!--添加项目介质使用springboot构建-->
